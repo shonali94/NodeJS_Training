@@ -1,0 +1,8 @@
+
+In NodeJS, we have three types of modules:
+
+1. Core Modules (http, path, os, fs etc..)
+2. User-Defined Modules/Local Modules
+3. Third-Party Modules
+
+npm install bootstrap
