@@ -1,8 +1,0 @@
-{
-  "name": "bg-module",
-  "version": "1.0.0",
-  "description": "This is my own bundle.",
-  "main": "index.js",
-  "author": "Bhawna Gunwani",
-  "license": "ISC"
-}
