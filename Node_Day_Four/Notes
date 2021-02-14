@@ -1,0 +1,31 @@
+
+GET Method: Getting Resource
+POST Method: Adding New Resource
+PUT Method: Updating Resources
+DELETE Method: Deleting Resources
+
+
+GET: http://localhost:3000/api/courses
+GET by ID: http://localhost:3000/api/courses/106
+POST: http://localhost:3000/api/courses
+PUT: http://localhost:3000/api/courses/101
+DELETE: http://localhost:3000/api/courses/101
+
+------------------------------------------------------------------------------
+
+mongodb:
+
+    npm install mongodb
+
+    - MongoDb is a database.
+    - It is implemented by callbacks.
+
+
+------------------------------------------------------------------------------
+
+mongoose:
+
+    npm install mongoose
+
+    - Mongoose a ORM Tool(Object Relation Mapping).
+    - Mongoose supports event-driven architecture and promises.
