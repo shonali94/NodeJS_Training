@@ -1,0 +1,93 @@
+
+Start the mongodb server
+
+Default Port: 27017
+Default Data Directory: c:/data/db
+
+	> mongod
+	
+	> mongod --port 27017 --dbpath d:/data/db
+
+--------------------------------------------------
+
+connect the mongodb client with Server
+
+	> mongo
+	
+--------------------------------------------------
+
+	> Show dbs
+	
+-- To create new database or use existing one.
+	
+	> use trainingdb
+
+-- To check the database that is in use:
+
+	> db
+	
+-- To crette a new collection(table):
+
+	db.createCollection('employees');
+	
+-- To insert document(record/row) in 'employees' collection:
+
+	db.employees.insert({ "name": "King", "salary": 12000 });
+	db.employees.insert({ "name": "Kochhar", "salary": 22000 });
+	db.employees.insert({ "name": "John", "salary": 10000 });
+	db.employees.insert({ "name": "Smith", "salary": 11000 });
+
+-- To see all documents:
+
+	db.employees.find();	// SELECT * FROM EMPLOYEES;
+
+-- To see documents with condition:
+
+	db.employees.find({ "name":"King" });
+	db.employees.find({ "salary":22000 });
+	db.employees.find({ "salary": {$lt: 20000} });
+	db.employees.find({ "salary": {$gt: 20000} });
+	db.employees.find({ "salary": {$gte: 20000} });
+	db.employees.find({ "salary": {$lte: 20000} });
+	db.employees.find({ "salary": {$eq: 20000} });
+	db.employees.find({ "salary": {$ne: 22000} });
+	
+-- To delete a document from collection:
+
+	db.employees.deleteOne({"name": "King" })
+	
+	db.employees.deleteMany({ "salary": {$lt: 15000} })
+
+-- To update existing documents:
+
+	db.employees.updateOne(
+		{ "name" : "Kochhar" },
+		{ $set: { "name": "King", "salary": 50000 }}
+	)
+	
+	db.employees.updateMany(
+		{ "name" : "Kochhar" },
+		{ $set: { "name": "King", "salary": 50000 }}
+	)
+
+-----------------------------------------------------
+
+	db.users.insertMany(
+		[
+			{ "name": "Bhawna", "city": "Delhi" },
+			{ "name": "Rohit", "city": "Delhi" },
+			{ "name": "Sumit", "city": "New York" },
+			{ "name": "Barek", "city": "New York" }
+		]
+	)
+
+
+
+
+
+
+
+
+
+
+
